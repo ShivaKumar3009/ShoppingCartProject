@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.home{
+    height: 100vh;
+    background-image: linear-gradient(rgba(134, 126, 126, 0.658),rgba(0,0,0,0.6)),  url(./images/product-2.jpeg) ;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nav-bar{
+    display: flex;
+    padding: 70px 120px;
+}
+
+.nav-logo{
+    width:135px;
+    padding-top: 10px;
+}
+.nav-links{
+    flex: 1;
+}
+.banner-title a{
+    text-decoration: none;
+}
+.btn {
+    margin: 8px 10px;
+    display: inline;
+    padding: 10px 20px;
+    border: 0;
+    background:  #f09d51;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn2 {
+    margin: 8px 10px;
+    display: inline;
+    padding: 10px 20px;
+    border: 0;
+    background:  #f09d51;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-links .btn2{
+    float: right;
+}
+.nav-links .btn{
+    float: right;
+}
+.banner-title{
+    margin:20px 115px;
+    color: #fff;
+}
+.banner-title h1{
+    font-size: 64px;
+    
+}
+.banner-title h1 span{
+    color:#f09d51;
+}
