@@ -29,7 +29,7 @@ def register(request):
                 user = User.objects.create_user(
                     username=username, email=email, password=password)
                 user.save()
-                return render(request, 'index.html')
+                return render(request,  'index.html')
         else:
             messages.info(request, 'Password Not Matching')
             return redirect('register')

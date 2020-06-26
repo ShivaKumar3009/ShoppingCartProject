@@ -58,8 +58,8 @@ class UI {
         <!--end of single product-->
         `;
     });
-    // productsDOM.innerHTML = result;
-    document.getElementsByClassName(".products-center").innerHTML = result;
+    productsDOM.innerHTML = result;
+    //document.querySelectorAll("div.products-center").innerHTML = result;
   }
   getBagButtons() {
     const buttons = [...document.querySelectorAll(".bag-btn")];

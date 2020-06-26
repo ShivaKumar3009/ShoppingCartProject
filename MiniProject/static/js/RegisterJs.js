@@ -1,4 +1,5 @@
 function validate() {
+  console.log("hello");
   var u = document.getElementById("user").value;
   var e = document.getElementById("email").value;
   var p1 = document.getElementById("pass1").value;
