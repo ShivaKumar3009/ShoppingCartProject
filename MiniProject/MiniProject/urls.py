@@ -22,4 +22,5 @@ urlpatterns = [
     #  path('admin/', admin.site.urls),
     path('register', include('ComfyHouse.urls')),
     path('login', include('ComfyHouse.urls'))
+
 ]
