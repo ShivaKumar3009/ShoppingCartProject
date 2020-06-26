@@ -17,7 +17,7 @@ let buttonsDOM = [];
 class Products {
   async getProducts() {
     try {
-      let result = await fetch("static/products.json");
+      let result = await fetch("products.json");
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
@@ -58,7 +58,8 @@ class UI {
         <!--end of single product-->
         `;
     });
-    productsDOM.innerHTML = result;
+    // productsDOM.innerHTML = result;
+    document.getElementsByClassName(".products-center").innerHTML = result;
   }
   getBagButtons() {
     const buttons = [...document.querySelectorAll(".bag-btn")];
