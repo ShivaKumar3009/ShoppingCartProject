@@ -13,7 +13,65 @@ let cart = [];
 //buttons
 let buttonsDOM = [];
 
-//getting the products
+var img1 = {
+  id: "1",
+  title: "queen panel bed",
+  price: 10000,
+  url: "static/images/product-1.jpeg",
+};
+
+var img2 = {
+  id: "2",
+  title: "king panel bed",
+  price: 10000,
+  url: "static/images/product-2.jpeg",
+};
+
+var img3 = {
+  id: "3",
+  title: "single panel bed",
+  price: 10000,
+  url: "static/images/product-3.jpeg",
+};
+
+var img4 = {
+  id: "4",
+  title: "twin panel bed",
+  price: 10000,
+  url: "static/images/product-4.jpeg",
+};
+
+var img5 = {
+  id: "5",
+  title: "fridge",
+  price: 10000,
+  url: "static/images/product-5.jpeg",
+};
+
+var img6 = {
+  id: "6",
+  title: "dresser",
+  price: 10000,
+  url: "static/images/product-6.jpeg",
+};
+
+var img7 = {
+  id: "7",
+  title: "couch",
+  price: 10000,
+  url: "static/images/product-7.jpeg",
+};
+
+var img8 = {
+  id: "8",
+  title: "table",
+  price: 10000,
+  url: "static/images/product-8.jpeg",
+};
+
+var products = [img1, img2, img3, img4, img5, img6, img7, img8];
+
+/* //getting the products
 class Products {
   async getProducts() {
     try {
@@ -31,7 +89,7 @@ class Products {
       console.log(console.error);
     }
   }
-}
+}  */
 
 // display products
 class UI {
@@ -43,7 +101,7 @@ class UI {
         <article class="product">
           <div class="img-container">
             <img
-              src=${product.image}
+              src=${product.url}
               alt="product"
               class="product-img"
             />
@@ -59,7 +117,6 @@ class UI {
         `;
     });
     productsDOM.innerHTML = result;
-    //document.querySelectorAll("div.products-center").innerHTML = result;
   }
   getBagButtons() {
     const buttons = [...document.querySelectorAll(".bag-btn")];
@@ -102,7 +159,7 @@ class UI {
   addCartItem(item) {
     const div = document.createElement("div");
     div.classList.add("cart-item");
-    div.innerHTML = `<img src=${item.image} alt="product" />
+    div.innerHTML = `<img src=${item.url} alt="product" />
             <div>
               <h4>${item.title}</h4>
               <h5>Rs. ${item.price}</h5>
@@ -212,18 +269,12 @@ class Storage {
 
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
-  const products = new Products();
+  // const products = new Products();
   //setup app
   ui.setupAPP();
   //get all products
-  products
-    .getProducts()
-    .then((products) => {
-      ui.displayProducts(products);
-      Storage.saveProducts(products);
-    })
-    .then(() => {
-      ui.getBagButtons();
-      ui.cartLogic();
-    });
+  ui.displayProducts(products);
+  Storage.saveProducts(products);
+  ui.getBagButtons();
+  ui.cartLogic();
 });
