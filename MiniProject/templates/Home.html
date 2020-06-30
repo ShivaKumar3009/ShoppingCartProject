@@ -8,35 +8,33 @@
     <link rel="stylesheet" href={% static './styles/HomeStyle.css' %} />
   </head>
   <body>
-    <form>
-      <div
-        class="home"
-        style="background-image: url('static/images/product-2.jpeg');"
-      >
-        <div class="nav-bar">
-          <div class="nav-logo">
-            <img src={% static './images/logo.svg' %} alt="home logo" />
-          </div>
-          <div class="nav-links">
-            <a href="register">
-              <button type="button" class="btn2">CREATE ACCOUNT</button>
-            </a>
-            <a href="login">
-              <button type="button" class="btn">SIGN IN</button>
-            </a>
-          </div>
+    <div
+      class="home"
+      style="background-image: url('static/images/product-2.jpeg');"
+    >
+      <div class="nav-bar">
+        <div class="nav-logo">
+          <img src={% static './images/logo.svg' %} alt="home logo" />
         </div>
-        <div class="banner-title">
-          <h1>
-            In Every Room <br />
-            <span>Furniture Reflects you</span> <br />
-            Larger Than Life.
-          </h1>
-          <a href="https://www.urbanladder.com/">
-            <button type="button" class="btn">EXPLORE</button>
+        <div class="nav-links">
+          <a href="register">
+            <button type="button" class="btn2">CREATE ACCOUNT</button>
+          </a>
+          <a href="login">
+            <button type="button" class="btn">SIGN IN</button>
           </a>
         </div>
       </div>
-    </form>
+      <div class="banner-title">
+        <h1>
+          In Every Room <br />
+          <span>Furniture Reflects you</span> <br />
+          Larger Than Life.
+        </h1>
+        <a href="https://www.urbanladder.com/">
+          <button type="button" class="btn">EXPLORE</button>
+        </a>
+      </div>
+    </div>
   </body>
 </html>
